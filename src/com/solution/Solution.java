@@ -5,20 +5,10 @@ public class Solution {
 
 
 
-    public static int getresult(int n)
+    public static boolean getresult(String str)
     {
-        if (n < 0)
-        {
-            throw new IllegalArgumentException("n must be >= 0");
-        }
-	else if (n < 2)
-	{
-	    return n;
-	}
-	else
-	{
-	    return getresult(n - 1) + getresult(n - 2);
-	}
+      // your code goes here
+
     }
 
 
@@ -29,13 +19,13 @@ public class Solution {
         {
              System.exit(1);
         }
-        int n = Integer.parseInt(args[0]);
-        if (n < 0)
+        String str = args[0];
+        if (str.length() < 0)
         {
              System.exit(2);
         }
-        int fibonacci = Solution.getresult(n);
-        System.out.print("Fibonacci(" + n + ") = " + fibonacci + "\n");
+        boolean result = Solution.getresult(str);
+        System.out.print("is (" + str + ") a palindrome:  " + result + "\n");
     }
 
 }
