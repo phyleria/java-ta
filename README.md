@@ -58,7 +58,7 @@ $: ./lib/ant/bin/ant jar
 
 
 # for windows systems 
-$: ant\bin\ant.bat jar
+$: lib\ant\bin\ant.bat jar
 
 # run the jar file passing in argument
 $: java -jar build/jar/solution-*.jar <input>
