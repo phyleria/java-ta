@@ -9,35 +9,47 @@ import com.solution.Solution;
 
 public class SolutionTest {
 
-    /** Test getresult(1). */
     @Test
-    public void testFib1()
+    public void teststruppercase()
     {
-        assertEquals(1, Solution.getresult(1));
+        assertEquals("foo".toUpperCase(), "FOO");
     }
 
-    /** Test getresult(2). */
     @Test
-    public void testFib2()
+    public void testcase0()
     {
-        assertEquals(1, Solution.getresult(2));
+        assertTrue(Solution.getresult("madam"));
     }
 
 
-    /** Test getresult(-1). */
     @Test
-    public void testFibMinusOne()
+    public void testcase1()
     {
-        boolean caught = false;
-        try
-        {
-            Solution.getresult(-1);
-        }
-        catch (IllegalArgumentException e)
-        {
-            caught = true;
-        }
-        assertTrue(caught);
+        assertFalse(Solution.getresult("random string"));
+    }
+
+    @Test
+    public void testcase2()
+    {
+        assertTrue(Solution.getresult("satanoscillatemymetallicsonatas"));
+    }
+
+    @Test
+    public void testcase3()
+    {
+        assertTrue(Solution.getresult("in girum imus nocte et consumimur igni"));
+    }
+
+    @Test
+    public void testcase4()
+    {
+        assertFalse(Solution.getresult("lmaoml"));
+    }
+
+    @Test
+    public void testcase5()
+    {
+        assertTrue(Solution.getresult("wassamassaw"));
     }
 
 }
